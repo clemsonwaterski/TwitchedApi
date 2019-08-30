@@ -79,3 +79,6 @@ project(":bif") {
         testCompile "junit:junit:$junitVersion"
     }
 }
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
