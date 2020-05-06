@@ -14,4 +14,7 @@ jar {
         attributes "Main-Class": "com.rolandoislas.twitchunofficial.TwitchUnofficial"
     }
     from {configurations.compile.collect {zipTree(it)}}
+    exclude 'META-INF/*.RSA'
+    exclude 'META-INF/*.SF'
+    exclude 'META-INF/*.DSA'
 }
